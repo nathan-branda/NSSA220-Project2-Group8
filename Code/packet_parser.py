@@ -18,7 +18,7 @@ def parse() :
 				packet['len'] = fields[5]
 				packet['type'] = fields[8]
 				packet['assoc'] = fields[-1][:-1]
-				print(packet)
+				#print(packet)
 				packets[i-1].append(packet)
 			line = file.readline()
 	print('called parse function in packet_parser.py')
