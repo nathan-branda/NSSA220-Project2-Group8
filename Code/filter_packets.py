@@ -24,5 +24,4 @@ def filter() :
 			line = file.readline()
 		file.close()
 	print('called filter function in filter_packets.py')
-filter()
 	

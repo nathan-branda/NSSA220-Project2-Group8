@@ -23,5 +23,4 @@ def parse() :
 			line = file.readline()
 	print('called parse function in packet_parser.py')
 	return packets
-parse()
 	
