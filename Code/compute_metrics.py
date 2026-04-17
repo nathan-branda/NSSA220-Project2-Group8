@@ -1,5 +1,5 @@
 def compute(packets, host_ips) :
-	metrics = [{},{},{},{},{}, {}, {}, {}]
+	metrics = [{}, {}, {}, {}]
 	for i in range(len(packets)):
 
 		metrics[i]['sent_request']=0
