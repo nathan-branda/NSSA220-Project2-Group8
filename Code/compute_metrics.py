@@ -41,6 +41,9 @@ def compute(packets, host_ips) :
 				
 	for node in metrics:
 		node['avg_rtt'] = node['total_rtt'] / node['req_exchanges']
+		node['request_throughput'] = node['sent_request_bytes'] / node['total_rtt'] # kB and milliseconds cancel out
+		node['request_goodput'] = node['sent_request_data'] / node['total_rtt']
+
 	print(metrics)
 	print('called compute function in compute_metrics.py')
 
