@@ -36,8 +36,11 @@ def compute(packets, host_ips) :
 						metrics[i]['total_reply_delay'] += float(packet['time']) - float(pack['time'])
 						break
 				metrics[i]['received_requests'] += 1
+				metrics[i]['received_request_bytes'] += int(packet['len'])
+				metrics[i]['received_request_data'] += int(packet['len']) - 42
 
-
+			if packet['type'] == 'reply' and packet['src'] != host_ips[i]:
+				metrics[i]['received_replies'] += 1
 			if packet['type'] == 'reply' and packet['src'] == host_ips[i]:
 				metrics[i]['sent_replies'] += 1
 				
